@@ -24,10 +24,9 @@ public class ItemFormController {
 
     public void setData(Item item) {
         this.item = item;
-
         lblItemCode.setText(item.getItemID());
         lblItemName.setText(item.getItemName());
-        lblItemPrice.setText(String.format("$%.2f", item.getItemPrice()));
+        lblItemPrice.setText(String.valueOf(item.getItemPrice()));
     }
 
 

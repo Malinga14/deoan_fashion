@@ -59,24 +59,25 @@ public class DashboardFormController implements Initializable {
     private List<Item> items=new ArrayList<>();
     private Item item;
 
+    //--------Get data from database---------------
     private List<Item> getData(){
         items=new ArrayList<>();
 
-        for (int i=0;i<10;i++){
+        for (int i = 1; i <= 10; i++) {
             item=new Item();
             item.setItemName("T-Shirt");
-            item.setItemID("ITS000"+i+"");
+            item.setItemID("ITS000"+i);
             item.setItemPrice(14.75);
             items.add(item);
         }
         return items;
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    //-------Set & load items dynamically-----------
+    void loadItems(){
         items.addAll(getData());
         int column = 0;
-        int row = 0;
+        int row = 1;
 
         try {
             for (int i = 0; i < items.size(); i++) {
@@ -85,10 +86,11 @@ public class DashboardFormController implements Initializable {
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 ItemFormController itemFormController = fxmlLoader.getController();
+                itemFormController.setData(items.get(i));
 
                 grid.add(anchorPane, column++, row);
 
-                if (column == 5) {
+                if (column == 4) {
                     column = 0;
                     row++;
                 }
@@ -97,6 +99,11 @@ public class DashboardFormController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadItems();
     }
 
 
