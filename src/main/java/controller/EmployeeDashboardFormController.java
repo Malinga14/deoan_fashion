@@ -7,10 +7,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import lombok.Data;
 
@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 @Data
-public class DashboardFormController implements Initializable {
+public class EmployeeDashboardFormController implements Initializable {
 
 
     public static Stage stage;
@@ -66,8 +66,9 @@ public class DashboardFormController implements Initializable {
         for (int i = 1; i <= 10; i++) {
             item=new Item();
             item.setItemName("T-Shirt");
-            item.setItemID("ITS000"+i);
+            item.setItemID(STR."ID0\{i}");
             item.setItemPrice(14.75);
+            item.setItemPic("/img/tshirt.png");
             items.add(item);
         }
         return items;
@@ -126,5 +127,15 @@ public class DashboardFormController implements Initializable {
     }
 
     public void checkBoxWomens(ActionEvent actionEvent) {
+    }
+
+    public void btnLogOut(ActionEvent actionEvent) {
+        Stage stage = LoginFormController.stage;
+        try{
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_form.fxml"))));
+            stage.show();
+        }catch (IOException e){
+            throw new RuntimeException(e);
+        }
     }
 }

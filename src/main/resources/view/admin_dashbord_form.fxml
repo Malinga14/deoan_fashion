@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #222f3e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardFormController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-radius: 20;">
+         <left>
+            <VBox alignment="CENTER" prefHeight="674.0" prefWidth="310.0" spacing="20.0" style="-fx-padding: 10;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton onAction="#btnEmployees" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #0652DD; -fx-background-radius: 50;" text="Employees" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton onAction="#btnItems" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #0652DD; -fx-background-radius: 50;" text="Items" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton onAction="#btnSuppliers" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #0652DD; -fx-background-radius: 50;" text=" Suppliers" textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton onAction="#btnReports" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #0652DD; -fx-background-radius: 50;" text="Reports" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <AnchorPane prefHeight="126.0" prefWidth="1207.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" layoutX="282.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEOAN FASHIONS" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="73.0" />
+                     </font>
+                  </Text>
+                  <JFXButton layoutX="-10.0" layoutY="-9.0" onAction="#btnLogOut" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #eb2f06; -fx-background-radius: 15;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="673.0" prefWidth="877.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="anchorItems" layoutX="15.0" prefHeight="660.0" prefWidth="860.0" style="-fx-border-color: #ffff; -fx-border-radius: 20; -fx-border-width: 3;" visible="false">
+                     <children>
+                        <TableView fx:id="tblItems" layoutX="43.0" layoutY="270.0" prefHeight="377.0" prefWidth="787.0">
+                           <columns>
+                              <TableColumn fx:id="colItemsID" prefWidth="112.2666015625" text="ID" />
+                              <TableColumn fx:id="colItemsEmployeesID" prefWidth="139.20004272460938" text="Supplyer ID" />
+                              <TableColumn fx:id="colItemsName" prefWidth="234.39996337890625" text="Name" />
+                              <TableColumn fx:id="colItemsQTY" prefWidth="136.53326416015625" text="QTY" />
+                              <TableColumn fx:id="colItemsUnitPrice" prefWidth="165.06658935546875" text="Unit Price" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="699.0" layoutY="15.0" prefHeight="242.0" prefWidth="130.0" style="-fx-padding: 20; -fx-spacing: 10;">
+                           <children>
+                              <HBox prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#bntItemsAdd" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #0652DD; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#bntItemsUpdate" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #0be881; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="54.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#bntItemsDelete" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #eb2f06; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="98.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#bntItemsSearch" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #74b9ff; -fx-background-radius: 20;" text="Search" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <JFXTextField fx:id="txtItemsID" layoutX="28.0" layoutY="112.0" prefHeight="30.0" prefWidth="150.0" promptText="ID" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtItemsEmployeerID" layoutX="28.0" layoutY="187.0" prefHeight="30.0" prefWidth="150.0" promptText="Name" text="Supplyer ID" unFocusColor="WHITE" />
+                        <Separator layoutX="196.0" layoutY="113.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="0.0" />
+                        <JFXTextField fx:id="txtItemsName" layoutX="221.0" layoutY="112.0" prefHeight="30.0" prefWidth="200.0" promptText="Name" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtItemsQTY" layoutX="221.0" layoutY="187.0" prefHeight="30.0" prefWidth="200.0" promptText="QTY" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtItemsUnitPrice" layoutX="476.0" layoutY="110.0" prefHeight="30.0" prefWidth="150.0" promptText="Unit Price" unFocusColor="WHITE" />
+                        <Separator layoutX="447.0" layoutY="110.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="0.0" />
+                        <Text fill="WHITE" layoutX="355.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorEmployees" layoutX="15.0" prefHeight="660.0" prefWidth="860.0" style="-fx-border-color: #ffff; -fx-border-radius: 20; -fx-border-width: 3;" visible="false">
+                     <children>
+                        <TableView fx:id="tblEmployees" layoutX="25.0" layoutY="256.0" prefHeight="378.0" prefWidth="810.0">
+                          <columns>
+                            <TableColumn fx:id="colEmployeesID" prefWidth="94.40006256103516" text="ID" />
+                            <TableColumn fx:id="colEmployeesName" prefWidth="129.60000610351562" text="Name" />
+                              <TableColumn fx:id="colEmployeesEmail" prefWidth="202.4000244140625" text="E-mail" />
+                              <TableColumn fx:id="colEmployeesPassword" prefWidth="120.79995727539062" text="Password" />
+                              <TableColumn fx:id="colEmployeesPhoneNo" minWidth="0.0" prefWidth="143.73333740234375" text="Phone No" />
+                              <TableColumn fx:id="colEmployeesNIC" prefWidth="116.2666015625" text="NIC No" />
+                          </columns>
+                        </TableView>
+                        <VBox layoutX="699.0" layoutY="15.0" prefHeight="242.0" prefWidth="130.0" style="-fx-padding: 20; -fx-spacing: 10;">
+                           <children>
+                              <HBox prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnEmployeeAdd" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #0652DD; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnEmployeeUpdate" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #0be881; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="54.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnEmployeeDelete" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #eb2f06; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="98.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnEmployeeSearch" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #74b9ff; -fx-background-radius: 20;" text="Search" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <JFXTextField fx:id="txtEmployeeID" layoutX="28.0" layoutY="97.0" prefHeight="30.0" prefWidth="150.0" promptText="ID" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtEmployeeName" layoutX="28.0" layoutY="172.0" prefHeight="30.0" prefWidth="150.0" promptText="Name" unFocusColor="WHITE" />
+                        <Separator layoutX="196.0" layoutY="98.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="0.0" />
+                        <JFXTextField fx:id="txtEmployeeEmail" layoutX="221.0" layoutY="97.0" prefHeight="30.0" prefWidth="200.0" promptText="E-mail" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtEmployeePassword" layoutX="221.0" layoutY="172.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtEmployeePhoneNo" layoutX="476.0" layoutY="95.0" prefHeight="30.0" prefWidth="150.0" promptText="Phone No" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtEmployeeNIC" layoutX="477.0" layoutY="170.0" prefHeight="30.0" prefWidth="150.0" promptText="NIC" unFocusColor="WHITE" />
+                        <Separator layoutX="447.0" layoutY="95.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="0.0" />
+                        <Text fill="WHITE" layoutX="335.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employees">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorSuppliers" layoutX="15.0" prefHeight="660.0" prefWidth="860.0" style="-fx-border-color: #ffff; -fx-border-radius: 20; -fx-border-width: 3;" visible="false">
+                     <children>
+                        <TableView fx:id="tblSuppliers" layoutX="25.0" layoutY="256.0" prefHeight="378.0" prefWidth="810.0">
+                           <columns>
+                              <TableColumn fx:id="colSupplierID" prefWidth="94.40006256103516" text="ID" />
+                              <TableColumn fx:id="colSupplierName" prefWidth="129.60000610351562" text="Name" />
+                              <TableColumn fx:id="colSupplierEmail" prefWidth="202.4000244140625" text="E-mail" />
+                              <TableColumn fx:id="colSupplierPassword" prefWidth="120.79995727539062" text="Password" />
+                              <TableColumn fx:id="colSupplierPhoneNo" minWidth="0.0" prefWidth="125.5999755859375" text="Phone No" />
+                              <TableColumn fx:id="colSupplierNIC" prefWidth="132.7999267578125" text="NIC No" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="699.0" layoutY="15.0" prefHeight="242.0" prefWidth="130.0" style="-fx-padding: 20; -fx-spacing: 10;">
+                           <children>
+                              <HBox prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnSupplyersAdd" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #0652DD; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnSupplyersUpdate" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #0be881; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="54.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnSupplyersDelete" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #eb2f06; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="98.0" prefHeight="44.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXButton onAction="#btnSupplyersSearch" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #74b9ff; -fx-background-radius: 20;" text="Search" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <JFXTextField fx:id="txtSuppliersID" layoutX="28.0" layoutY="97.0" prefHeight="30.0" prefWidth="150.0" promptText="ID" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtSuppliersName" layoutX="28.0" layoutY="172.0" prefHeight="30.0" prefWidth="150.0" promptText="Name" unFocusColor="WHITE" />
+                        <Separator layoutX="196.0" layoutY="98.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="0.0" />
+                        <JFXTextField fx:id="txtSuppliersEmail" layoutX="221.0" layoutY="97.0" prefHeight="30.0" prefWidth="200.0" promptText="E-mail" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtSuppliersPassword" layoutX="221.0" layoutY="172.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtSuppliersPhoneNo" layoutX="476.0" layoutY="95.0" prefHeight="30.0" prefWidth="150.0" promptText="Phone No" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtSuppliersNIC" layoutX="477.0" layoutY="170.0" prefHeight="30.0" prefWidth="150.0" promptText="NIC" unFocusColor="WHITE" />
+                        <Separator layoutX="447.0" layoutY="95.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="0.0" />
+                        <Text fill="WHITE" layoutX="335.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suppliers">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

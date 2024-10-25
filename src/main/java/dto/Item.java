@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Item {
     private String itemID;
+    private String itemName;
     private double itemPrice;
-    private String itemName;;
+    private String itemPic;
 
-    public Item(String itemID, double itemPrice, String itemName) {
-        this.itemID=itemID;
-        this.itemPrice=itemPrice;
-        this.itemName=itemName;
-
+    public Item(String itemID, String itemName, double itemPrice, String itemPic) {
+        this.itemID = itemID;
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.itemPic = itemPic;
     }
 }

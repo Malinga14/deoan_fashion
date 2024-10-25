@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #222f3e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeDashboardFormController">
    <children>
       <BorderPane prefHeight="800.0" prefWidth="1200.0" style="-fx-padding: 10;">
          <left>
@@ -22,13 +22,18 @@
                <top>
                   <HBox alignment="CENTER" prefHeight="126.0" prefWidth="758.0" BorderPane.alignment="CENTER">
                      <children>
-                        <VBox prefHeight="30.0" prefWidth="778.0">
+                        <VBox prefHeight="213.0" prefWidth="778.0">
                            <children>
-                              <HBox alignment="CENTER" prefHeight="136.0" prefWidth="778.0">
+                              <HBox alignment="CENTER_LEFT" prefHeight="111.0" prefWidth="778.0">
                                  <children>
+                                    <JFXButton onAction="#btnLogOut" prefHeight="77.0" prefWidth="91.0" style="-fx-background-color: #eb2f06; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </JFXButton>
                                     <HBox alignment="CENTER" prefHeight="127.0" prefWidth="300.0">
                                        <children>
-                                          <JFXButton onAction="#btnAddItem" prefHeight="70.0" prefWidth="280.0" style="-fx-background-color: #3867d6; -fx-background-radius: 20;" text="Add Item" textFill="WHITE">
+                                          <JFXButton onAction="#btnAddItem" prefHeight="70.0" prefWidth="280.0" style="-fx-background-color: #0652DD; -fx-background-radius: 20;" text="Add Item" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="35.0" />
                                              </font>
@@ -37,7 +42,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" prefHeight="77.0" prefWidth="300.0">
                                        <children>
-                                          <JFXButton onAction="#btnReports" prefHeight="70.0" prefWidth="380.0" style="-fx-background-color: #3867d6; -fx-background-radius: 20;" text="Reports" textFill="WHITE">
+                                          <JFXButton onAction="#btnReports" prefHeight="88.0" prefWidth="300.0" style="-fx-background-color: #0652DD; -fx-background-radius: 20;" text="Reports" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="35.0" />
                                              </font>
@@ -59,26 +64,26 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="35.0" prefWidth="778.0">
                                  <children>
-                                    <JFXCheckBox onAction="#checkBoxMens" prefHeight="18.0" prefWidth="140.0" text="Men's">
+                                    <JFXCheckBox onAction="#checkBoxMens" prefHeight="18.0" prefWidth="140.0" text="Men's" textFill="WHITE" unCheckedColor="WHITE">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
                                     </JFXCheckBox>
-                                    <JFXCheckBox onAction="#checkBoxWomens" prefHeight="18.0" prefWidth="140.0" text="Women's">
+                                    <JFXCheckBox onAction="#checkBoxWomens" prefHeight="18.0" prefWidth="140.0" text="Women's" textFill="WHITE" unCheckedColor="#fafafa">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
                                     </JFXCheckBox>
-                                    <JFXCheckBox onAction="#checkBoxKids" prefHeight="18.0" prefWidth="140.0" text="Kid's">
+                                    <JFXCheckBox onAction="#checkBoxKids" prefHeight="18.0" prefWidth="140.0" text="Kid's" textFill="WHITE" unCheckedColor="WHITE">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
                                     </JFXCheckBox>
                                  </children>
                               </HBox>
-                              <ScrollPane fx:id="scrollPane" layoutY="38.0" pickOnBounds="false" prefHeight="594.0" prefWidth="755.0" style="-fx-background-color: #596275;">
+                              <ScrollPane fx:id="scrollPane" layoutY="38.0" pickOnBounds="false" prefHeight="594.0" prefWidth="698.0" style="-fx-background-color: #686de0; -fx-background-insets: 0;">
                                  <content>
-                                    <GridPane fx:id="grid" prefHeight="0.0" prefWidth="5.0">
+                                    <GridPane fx:id="grid" prefHeight="0.0" prefWidth="5.0" style="-fx-background-color: #222f3e;">
                                        <rowConstraints>
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" />
                                        </rowConstraints>
@@ -101,7 +106,7 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="78.0" prefWidth="382.0">
                                  <children>
-                                    <Text fill="#1e272e" strokeType="OUTSIDE" strokeWidth="0.0" text="DEOAN FASHIONS" textAlignment="CENTER" wrappingWidth="358.0308828353882">
+                                    <Text fill="#bfd3e1" strokeType="OUTSIDE" strokeWidth="0.0" text="DEOAN FASHIONS" textAlignment="CENTER" wrappingWidth="358.0308828353882">
                                        <font>
                                           <Font name="Cambria Bold" size="43.0" />
                                        </font>
@@ -140,7 +145,7 @@
                      <children>
                         <VBox alignment="CENTER" layoutY="501.0" prefHeight="106.0" prefWidth="379.0">
                            <children>
-                              <JFXButton onAction="#btnPay" prefHeight="70.0" prefWidth="300.0" style="-fx-background-color: #26de81; -fx-background-radius: 40;" text="PAY" textFill="WHITE">
+                              <JFXButton onAction="#btnPay" prefHeight="70.0" prefWidth="300.0" style="-fx-background-color: #0be881; -fx-background-radius: 40;" text="PAY" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="35.0" />
                                  </font>

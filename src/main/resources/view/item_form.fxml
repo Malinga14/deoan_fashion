@@ -9,15 +9,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="200.0" prefWidth="150.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+<AnchorPane prefHeight="200.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: #686de0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
    <children>
       <VBox prefHeight="200.0" prefWidth="150.0" style="-fx-background-radius: 30;">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #d2dae2; -fx-background-radius: 10;">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 10;">
                <children>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="58.0">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="74.0">
                      <children>
-                        <Label fx:id="lblItemCode" prefHeight="32.0" prefWidth="48.0">
+                        <Label fx:id="lblItemCode" prefHeight="32.0" prefWidth="73.0">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -44,20 +44,20 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #d2dae2; -fx-background-radius: 10;">
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 10;">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="118.0">
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="118.0">
                      <children>
-                        <Label fx:id="lblItemName" prefHeight="18.0" prefWidth="98.0">
+                        <Label fx:id="lblItemName" contentDisplay="CENTER" prefHeight="18.0" prefWidth="98.0" textAlignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="72.0">
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="72.0">
                      <children>
-                        <Label fx:id="lblItemPrice" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="52.0">
+                        <Label fx:id="lblItemPrice" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="52.0" textAlignment="JUSTIFY">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

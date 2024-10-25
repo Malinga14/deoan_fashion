@@ -16,6 +16,8 @@ import java.util.ResourceBundle;
 
 public class LoginFormController implements Initializable {
 
+    public static Stage stage;
+
     @FXML
     private AnchorPane ancLogin;
 
@@ -33,13 +35,22 @@ public class LoginFormController implements Initializable {
 
     @FXML
     void btnLogin(ActionEvent event) {
-
-        Stage stage = DashboardFormController.stage;
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/dashboard_form.fxml"))));
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if(checkBoxLoginForAdmins.isSelected()){
+            Stage stage = AdminDashboardFormController.stage;
+            try{
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/admin_dashbord_form.fxml"))));
+                stage.show();
+            }catch (IOException e){
+                throw new RuntimeException(e);
+            }
+        }else{
+            Stage stage = EmployeeDashboardFormController.stage;
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/employee_dashboard_form.fxml"))));
+                stage.show();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -47,4 +58,5 @@ public class LoginFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
 }
