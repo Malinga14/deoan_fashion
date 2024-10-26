@@ -34,5 +34,7 @@ public class ItemFormController {
 
 
     public void btnADDCart(ActionEvent actionEvent) {
+        EmployeeDashboardFormController employeeDashboardFormController=new EmployeeDashboardFormController();
+        employeeDashboardFormController.loadCart(lblItemCode.getText(), lblItemName.getText(), lblItemPrice.getText());
     }
 }

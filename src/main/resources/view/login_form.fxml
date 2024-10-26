@@ -26,8 +26,8 @@
                               <Font name="Cambria Bold" size="24.0" />
                            </font>
                         </Text>
-                        <JFXTextField fx:id="txtEmail" focusColor="BLACK" layoutX="51.0" layoutY="198.0" prefHeight="26.0" prefWidth="298.0" promptText="E-mail" unFocusColor="WHITE" />
-                        <JFXTextField fx:id="txtPassword" focusColor="BLACK" layoutX="51.0" layoutY="287.0" prefHeight="26.0" prefWidth="298.0" promptText="Password" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="51.0" layoutY="198.0" prefHeight="26.0" prefWidth="298.0" promptText="E-mail" style="-fx-background-color: #ffff;" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtPassword" focusColor="WHITE" layoutX="51.0" layoutY="287.0" prefHeight="26.0" prefWidth="298.0" promptText="Password" style="-fx-background-color: #ffff;" unFocusColor="WHITE" />
                         <JFXButton layoutX="114.0" layoutY="442.0" onAction="#btnLogin" prefHeight="36.0" prefWidth="151.0" style="-fx-background-color: #ffff; -fx-border-radius: 15;" text="Log In">
                            <font>
                               <Font name="Cambria Bold" size="25.0" />
@@ -42,7 +42,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="0.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="ancLogo" prefHeight="600.0" prefWidth="600.0" />
+                  <AnchorPane fx:id="ancForgot" prefHeight="600.0" prefWidth="600.0" />
                </children>
             </AnchorPane>
          </center>

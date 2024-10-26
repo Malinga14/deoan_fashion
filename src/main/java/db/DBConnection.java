@@ -11,7 +11,7 @@ public class DBConnection {
     private static DBConnection instance;
     private Connection connection;
     private DBConnection() throws SQLException {
-        connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/deoanfashion ", "root", "12345");
+        connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/deoan", "root", "12345");
     }
     public Connection getConnection(){
         return connection;

@@ -18,4 +18,9 @@ public class Item {
         this.itemPic = itemPic;
     }
 
+    public Item(String id, String name, String price) {
+        this.itemID = id;
+        this.itemName = name;
+        this.itemPrice = Double.parseDouble(price);
+    }
 }
