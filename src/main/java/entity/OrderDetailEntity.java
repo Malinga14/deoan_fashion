@@ -14,14 +14,11 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="Employees")
-public class EmployeeEntity {
+@Table(name="Order_Details")
+public class OrderDetailEntity {
     @Id
-    private String employeeID;
-    private String employeeName;
-    private String employeeEmail;
-    private String employeePassword;
-    private String employeePohoneNo;
-    private String employeeNIC;
-
+    private String orderId;
+    private String customerEmail;
+    private String price;
+    private String itemID;
 }

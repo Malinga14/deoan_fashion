@@ -3,8 +3,8 @@ package dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
+@Data
 public class Item {
     private String itemID;
     private String itemName;
@@ -17,4 +17,5 @@ public class Item {
         this.itemPrice = itemPrice;
         this.itemPic = itemPic;
     }
+
 }
